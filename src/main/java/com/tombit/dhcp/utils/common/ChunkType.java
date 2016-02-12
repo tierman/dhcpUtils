@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by tomek on 06.02.2016.
+ * Created by Tomasz Jonczyk on 06.02.2016.
  */
 public enum ChunkType {
     HOST("host"),

@@ -9,7 +9,7 @@ import com.tombit.dhcp.utils.parameters.Prefix;
 import java.util.LinkedList;
 
 /**
- * Created by tomek on 04.02.2016.
+ * Created by Tomasz Jonczyk on 04.02.2016.
  */
 public class SubnetImpl implements Subnet {
 

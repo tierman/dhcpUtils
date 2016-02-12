@@ -10,7 +10,7 @@ import java.util.LinkedList;
 import java.util.logging.Logger;
 
 /**
- * Created by tomek on 01.02.2016.
+ * Created by Tomasz Jonczyk on 01.02.2016.
  */
 public class SaveToFile {
     private final static String BASE_TAB = "    ";

@@ -5,7 +5,7 @@ import com.tombit.dhcp.utils.parameters.ParameterType;
 import com.tombit.dhcp.utils.parameters.Prefix;
 
 /**
- * Created by tomek on 04.02.2016.
+ * Created by Tomasz Jonczyk on 04.02.2016.
  */
 public class ParameterImpl implements Parameter {
 

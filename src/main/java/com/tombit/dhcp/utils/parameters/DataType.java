@@ -1,7 +1,7 @@
 package com.tombit.dhcp.utils.parameters;
 
 /**
- * Created by tomek on 03.02.2016.
+ * Created by Tomasz Jonczyk on 03.02.2016.
  */
 public enum DataType {
 	IP_ADDRESS,

@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 import static com.tombit.dhcp.utils.common.ChunkType.*;
 
 /**
- * Created by tomek jonczyk on 01.02.2016.
+ * Created by Tomasz Jonczyk on 01.02.2016.
  */
 public class ReadFromFile {
 

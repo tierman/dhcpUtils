@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by tomek on 03.02.2016.
+ * Created by Tomasz Jonczyk on 03.02.2016.
  */
 public enum Prefix {
 	OPTION("option"),
