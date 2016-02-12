@@ -1,0 +1,6 @@
+*.iml
+test.txt
+.gradle
+.idea
+build
+target
