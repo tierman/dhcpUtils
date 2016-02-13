@@ -1,4 +1,7 @@
-package com.tombit.dhcp.utils.common;
+package com.tombit.dhcp.utils.common.impl;
+
+import com.tombit.dhcp.utils.common.Chunk;
+import com.tombit.dhcp.utils.common.Parameter;
 
 import java.util.LinkedList;
 

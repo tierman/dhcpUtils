@@ -5,6 +5,7 @@ import java.util.Map;
 
 /**
  * Created by Tomasz Jonczyk on 03.02.2016.
+ * ParameterType describe parameters and options. If you need, put new parameters types into this enum.
  */
 public enum ParameterType {
 

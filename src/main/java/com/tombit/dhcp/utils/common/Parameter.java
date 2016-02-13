@@ -4,7 +4,7 @@ import com.tombit.dhcp.utils.parameters.ParameterType;
 
 /**
  * Created by Tomasz Jonczyk on 01.02.2016.
- * This class describe options like max-lease-time or routers etc. (Example option domain-name-servers ns1.example.com)
+ * Describe options like max-lease-time or routers etc. (Example option domain-name-servers ns1.example.com)
  */
 public interface Parameter {
 

@@ -1,7 +1,7 @@
 package com.tombit.dhcp.utils.out;
 
 import com.tombit.dhcp.utils.common.Chunk;
-import com.tombit.dhcp.utils.common.DhcpFile;
+import com.tombit.dhcp.utils.common.impl.DhcpFile;
 import com.tombit.dhcp.utils.common.Parameter;
 
 import java.io.IOException;

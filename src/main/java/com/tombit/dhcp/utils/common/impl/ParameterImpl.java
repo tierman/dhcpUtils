@@ -2,7 +2,6 @@ package com.tombit.dhcp.utils.common.impl;
 
 import com.tombit.dhcp.utils.common.Parameter;
 import com.tombit.dhcp.utils.parameters.ParameterType;
-import com.tombit.dhcp.utils.parameters.Prefix;
 
 /**
  * Created by Tomasz Jonczyk on 04.02.2016.
@@ -34,20 +33,10 @@ public class ParameterImpl implements Parameter {
 
 	@Override
 	public String toString() {
-		if (type == null) {
-			return null;
-		}
-		StringBuffer sb = new StringBuffer();
-		if (type.getPrefix() != Prefix.BLANK) {
-			sb.append(type.getPrefix().getName());
-			sb.append(" ");
-		}
-		sb.append(type.getName());
-		sb.append(" ");
-		sb.append(value);
-		sb.append(" ;");
-
-		return sb.toString();
+		return "ParameterImpl{" +
+				"type=" + type +
+				", value='" + value + '\'' +
+				'}';
 	}
 
 	@Override

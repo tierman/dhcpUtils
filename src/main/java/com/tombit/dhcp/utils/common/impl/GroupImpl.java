@@ -25,7 +25,7 @@ public class GroupImpl implements Group {
     @Override
     public void addChunk(Chunk chunk) {
         if (chunk.getType() != ChunkType.HOST) {
-            throw new IllegalArgumentException("Cannot add another type of chunk like host to subnet.");
+            throw new IllegalArgumentException("Cannot add chunk type: "+ chunk.getType() + " to subnet.");
         }
         chunks.addLast(chunk);
     }
@@ -108,5 +108,15 @@ public class GroupImpl implements Group {
         result = 31 * result + (getComments() != null ? getComments().hashCode() : 0);
         result = 31 * result + (isCompleted() ? 1 : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "GroupImpl{" +
+                "chunks=" + chunks +
+                ", parameters=" + parameters +
+                ", comments=" + comments +
+                ", completed=" + completed +
+                '}';
     }
 }
