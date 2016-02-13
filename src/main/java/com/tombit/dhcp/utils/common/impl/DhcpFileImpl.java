@@ -8,8 +8,9 @@ import java.util.LinkedList;
 /**
  * Created by Tomasz Jonczyk on 01.02.2016.
  */
-public class DhcpFile {
+public class DhcpFileImpl implements com.tombit.dhcp.utils.common.DhcpFile {
 
+	private LinkedList<String> errors;
 	private LinkedList<String> comments;
 	private LinkedList<Parameter> parameters;
 	private LinkedList<Chunk> chunks;

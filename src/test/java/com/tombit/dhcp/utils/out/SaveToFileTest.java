@@ -1,7 +1,7 @@
 package com.tombit.dhcp.utils.out;
 
 import com.tombit.dhcp.utils.common.*;
-import com.tombit.dhcp.utils.common.impl.DhcpFile;
+import com.tombit.dhcp.utils.common.impl.DhcpFileImpl;
 import com.tombit.dhcp.utils.common.impl.HostImpl;
 import com.tombit.dhcp.utils.common.impl.ParameterImpl;
 import com.tombit.dhcp.utils.common.impl.SubnetImpl;
@@ -46,7 +46,7 @@ public class SaveToFileTest {
 
     @Test
     public void testWriteDhcpFile_withCommentAndParameters() throws Exception {
-        DhcpFile dhcpFile = prepareFileWithCommentAndThreeParameters();
+        DhcpFileImpl dhcpFile = prepareFileWithCommentAndThreeParameters();
         SaveToFile stf = new SaveToFile();
         stf.writeDhcpFile(TEST_FILE, dhcpFile);
 
@@ -61,7 +61,7 @@ public class SaveToFileTest {
 
     @Test
     public void testWriteDhcpFile_withChunks() throws Exception {
-        DhcpFile dhcpFile = prepareFileWithChunks();
+        DhcpFileImpl dhcpFile = prepareFileWithChunks();
         SaveToFile stf = new SaveToFile();
         stf.writeDhcpFile(TEST_FILE, dhcpFile);
 
@@ -75,15 +75,15 @@ public class SaveToFileTest {
         assertEquals(TEST_EMPTY, lines.get(4));
     }
 
-    private DhcpFile prepareFileWithChunks() {
-        DhcpFile df = prepareFileWithCommentAndThreeParameters();
+    private DhcpFileImpl prepareFileWithChunks() {
+        DhcpFileImpl df = prepareFileWithCommentAndThreeParameters();
 
         addChunks(df);
 
         return df;
     }
 
-    private void addChunks(DhcpFile df) {
+    private void addChunks(DhcpFileImpl df) {
         for (int subnetIndex = 0; subnetIndex < 3; ++subnetIndex) {
             df.addChunk(addSubnetWithHosts(subnetIndex));
         }
@@ -119,8 +119,8 @@ public class SaveToFileTest {
         return host;
     }
 
-    private DhcpFile prepareFileWithCommentAndThreeParameters() {
-        DhcpFile df = prepareEmptyFileWithComment();
+    private DhcpFileImpl prepareFileWithCommentAndThreeParameters() {
+        DhcpFileImpl df = prepareEmptyFileWithComment();
 
         for (ParameterType pt : new ParameterType[]{ParameterType.FILENAME, ParameterType.LOG_SERVERS, ParameterType.TIME_SERVERS}) {
             Parameter param = new ParameterImpl();
@@ -133,8 +133,8 @@ public class SaveToFileTest {
         return df;
     }
 
-    private DhcpFile prepareEmptyFileWithComment() {
-        DhcpFile df = new DhcpFile();
+    private DhcpFileImpl prepareEmptyFileWithComment() {
+        DhcpFileImpl df = new DhcpFileImpl();
         df.addComment(TEST_COMMENT);
         return df;
     }

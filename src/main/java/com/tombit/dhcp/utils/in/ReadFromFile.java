@@ -35,7 +35,7 @@ public class ReadFromFile {
 		DhcpFile mappedFile = null;
 
 		try {
-			mappedFile = new DhcpFile();
+			mappedFile = new DhcpFileImpl();
 			LinkedList<String> commentsBuffer = new LinkedList<>();
 			int lineIndex = 0;
 			while ((line = dhcpFile.readLine()) != null) {

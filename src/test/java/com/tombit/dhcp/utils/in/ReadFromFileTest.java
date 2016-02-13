@@ -4,7 +4,7 @@ import com.tombit.dhcp.utils.common.Chunk;
 import com.tombit.dhcp.utils.common.ChunkType;
 import com.tombit.dhcp.utils.common.Host;
 import com.tombit.dhcp.utils.common.Subnet;
-import com.tombit.dhcp.utils.common.impl.DhcpFile;
+import com.tombit.dhcp.utils.common.impl.DhcpFileImpl;
 import com.tombit.dhcp.utils.common.impl.HostImpl;
 import com.tombit.dhcp.utils.parameters.ParameterType;
 import org.junit.Test;
@@ -32,7 +32,7 @@ public class ReadFromFileTest {
 		BufferedReader emptyFile = new BufferedReader(new InputStreamReader(is));
 		ReadFromFile readFromFile = new ReadFromFile();
 
-		DhcpFile result = readFromFile.readDhcpFile(emptyFile);
+		DhcpFileImpl result = readFromFile.readDhcpFile(emptyFile);
 
 		assert result != null;
 		assert result.getChunks().isEmpty();
@@ -48,7 +48,7 @@ public class ReadFromFileTest {
 		BufferedReader emptyFile = new BufferedReader(new InputStreamReader(is));
 		ReadFromFile readFromFile = new ReadFromFile();
 
-		DhcpFile result = readFromFile.readDhcpFile(emptyFile);
+		DhcpFileImpl result = readFromFile.readDhcpFile(emptyFile);
 
 		assert result != null;
 		assert result.getChunks() != null;
@@ -61,7 +61,7 @@ public class ReadFromFileTest {
 		BufferedReader emptyFile = new BufferedReader(new InputStreamReader(is));
 		ReadFromFile readFromFile = new ReadFromFile();
 
-		DhcpFile result = readFromFile.readDhcpFile(emptyFile);
+		DhcpFileImpl result = readFromFile.readDhcpFile(emptyFile);
 
 		assertNotNull(result);
 		assertNotNull(result.getChunks());
